@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "bilingual-lawyer-advocat-et-notaire",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

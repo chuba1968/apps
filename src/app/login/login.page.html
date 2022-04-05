@@ -1,0 +1,64 @@
+
+<ion-header>
+
+</ion-header>
+
+<ion-content >
+
+
+
+
+  <div class="blackdiv">
+    <div>
+
+  <!--  <p>Croftstone Attorneys </p>  -->
+
+  <img src="/assets/Login-cuate.svg" >
+
+
+
+  <form (ngSubmit)="login()" [formGroup]="credentials"  class="ion-padding">
+    <ion-item fill="solid" class="ion-margin-bottom">
+      <ion-input type="email" placeholder="adresse e-mail" formControlName="email"></ion-input>
+      <ion-note slot="error" *ngIf="(email.dirty || email.touched) && email.errors">Email is invalid</ion-note>
+    </ion-item>
+
+    <ion-item fill="solid" class="ion-margin-bottom">
+      <ion-input type="password" placeholder="le mot de passe" formControlName="password"></ion-input>
+      <ion-note slot="error" *ngIf="(password.dirty || password.touched) && password.errors">Password needs to be 6 characters</ion-note>
+    </ion-item>
+
+
+
+      <ion-button type="submit" expand="block" [disabled]="!credentials.valid" class="button1">connexion
+
+      </ion-button>
+
+      <ion-button type="button" expand="block" (click)="register()" class="button">   <ion-icon name="add-circle-sharp" slot="start"></ion-icon>créer un compte client</ion-button>
+  </form>
+
+   </div>
+  </div>
+
+  <div class="container">
+  <div>
+
+    <p class="para">nous sommes avocats et notaires bilingues
+
+
+
+    </p>
+    <p>D.O Botoku & Co 23 Rue Igbosere, Lagos Nigeria, un cabinet d'avocats bilingue, se classant parmi les cabinets d'avocats à la croissance la plus rapide au Nigeria, a été fondé par un groupe d'avocats passionnés, travailleurs et honnêtes engagés dans l'excellente prestation de services juridiques au Nigeria. </p>
+
+  <!--
+    <p>D.O Botoku & Co 23 Rue Igbosere, Lagos Nigeria, is a bilingual law firm that is committed to providing excellent legal services and is one of Nigeria's fastest growing law firms. </p>
+  -->
+    <img class="flag" src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/250px-Flag_of_France.svg.png" alt="" srcset="">
+
+
+
+  </div>
+
+  </div>
+
+</ion-content>

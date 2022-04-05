@@ -1,0 +1,7 @@
+{
+  "name": "bilingual-lawyer-advocat-et-notaire",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
