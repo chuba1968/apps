@@ -1,4 +1,4 @@
-package io.ionic.starter;
+package io.bilingual.lawyer;
 
 import com.getcapacitor.BridgeActivity;
 

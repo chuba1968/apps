@@ -1,5 +1,24 @@
 ion-content{
-  --ion-background-color: #FFF5FF!important;
+  --ion-background-color: #ffffff!important;
+}
+
+
+
+ion-item{
+  border-radius: 10px;
+  --background: none !important;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  ion-icon{
+    color:#324B4C;
+  }
+
+}
+
+h2{
+  color:#000000;
 }
 
 
@@ -9,15 +28,7 @@ ion-toolbar{
 
 }
 
-div{
 
-//  height: 30%;background-color: rgb(35, 35, 207);
-//  border-bottom-left-radius: 70px;
- // border:none;
-
-
-}
-//before the box tag
 .container {
   background:#00C6CF;
 
@@ -90,19 +101,7 @@ span > p {
 
 
 
-    ion-card{
-      --background:#324B4C;
-      object-fit:cover;
-      margin-left:50px;
-      padding: 10px;
-      margin-right: 50px;
-      box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-
-      img{
-        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-      }
-    }
-
+  
 
   }
 
@@ -117,8 +116,10 @@ margin-right: 10px;
 font-family: 'Quicksand', sans-serif;
 }
 
+
+//first law css
 .product-slider {
-margin-top: 20px;
+margin-top: 10px;
 margin-left: 10px;
 margin-right: 10px;
 
@@ -139,8 +140,49 @@ img {
 
 }
 
+//lawyers css
+.product-slider2 {
+  margin-top: 0px;
+  margin-left: 15px;
+  margin-right: 15px;
+margin-bottom: 20px;
 
+ion-button{
+  margin-top: 50%;
+  margin-bottom: 25%;
+  text-align: center;
+  --border-radius:50px;
+}
 
+  div{
+    background-color:  #00C6CF;
+    width: 100%;
+    height: 70px;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 5px;
+    margin-top: 40px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  }
+  
+  img {
+    width: 140px;
+    height: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    object-fit: cover;
+    border-radius: 100px;
+    transform: translateY(-60px);
+    position: absolute;
+    right: 0;
+  
+
+  }
+  
+  }
+  
 
 .advert{
   width: auto;
@@ -150,21 +192,7 @@ img {
 
 
 
-ion-item{
-  border-radius: 5px;
-  --background: none !important;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
-  margin-bottom: 10px;
 
-  ion-icon{
-    color:#324B4C;
-  }
-
-}
-
-h2{
-  color:#000000;
-}
 
 
 .para{
@@ -176,3 +204,28 @@ h2{
   margin-right: 10px;
 }
 
+
+.container3 {
+  --background: #324B4C !important;
+  margin: 5px;
+  margin-bottom: 40%;
+  border-radius: 20px 20px 0px 0px;
+  padding-top:10px;
+  padding-bottom: 60px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  .para{
+    color: rgb(255, 255, 255);
+    font-family: 'Quicksand', sans-serif;
+    font-size:15px;
+   
+
+  }
+
+}
+
+
+.space{
+  margin-top: 20%;
+
+
+}

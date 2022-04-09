@@ -31,6 +31,12 @@
 
       <swiper [pagination]="true" class="product-slider" [slidesPerView]="" [loop]="true"  effect="fade"  [spaceBetween]="20">
 
+
+        <ng-template swiperSlide>
+          <img [defaultImage]="'https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921'" [lazyLoad]="'https://live.staticflickr.com/5655/22092524311_685f91d90f_z.jpg'">
+
+        </ng-template>
+
         <ng-template swiperSlide>
           <img [defaultImage]="'https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921'" [lazyLoad]="'https://media.istockphoto.com/photos/bitcoin-symbol-and-gavel-to-regulate-cryptocurrencies-market-picture-id1328513560?k=20&m=1328513560&s=612x612&w=0&h=NNq00Apktjdw_dBVgk0tnON6KDYw0UJpj-3bwD1qX-A='">
         </ng-template>
@@ -48,8 +54,7 @@
           <img [defaultImage]="'https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921'" [lazyLoad]="'https://blog.ipleaders.in/wp-content/uploads/2020/09/copyright-laws.jpg'">
         </ng-template>
         <ng-template swiperSlide>
-          <img [defaultImage]="'https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921'" [lazyLoad]="'
-          https://queensattorneys.org/wp-content/uploads/2018/09/intellectual-property.jpg'">
+          <img [defaultImage]="'https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921'" [lazyLoad]="'https://s3-eu-west-1.amazonaws.com/wi-ebay-pictures/EBAY/86/62/32/232668601452_images.linnlive.com_32ff16d100d2c3e767a610b66b3a88c3_5441686b-e61f-44c5-ba73-aa8a34c19de9.jpeg'">
         </ng-template>
 
 
@@ -68,72 +73,104 @@
       <p class="para">nous sommes avocats et notaires bilingues
       </p>
 
-<div class="contaier2">
+
+    <ion-item  item lines="none" *ngFor="let data of boyRecords | filter:filterTerm">
+          <ion-thumbnail slot="start">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAMAAADDpiTIAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAK5QTFRF////QUeb/0tVQUeb/0tVQUeb/0tVQUeb/0tVQUeb/0tVQUeb/0tVQUeb/0tVQUeb/0tVQUeb/0tVQUeb/0tVQUeb/0tVQUeb/0tVQUeb/0tVQUeb/0tVi47A/XB4QUeb/0tVQUeb/0tVQUeb9fX1/0tVQUeb/0tVQUeb/0tVkZXDkZTD/WVtQUeb/0tVQUeb/0tVQUeb/0tVQUeb/0tVQUeb/0tVQUeb9fX1/0tV0QJVKwAAADd0Uk5TAAEBBQUGBg4OHBwgIDAwQEBqam1tdHR7e4WFh4eZmaamrq64uLi8vMDAxcbGz8/T0+Hh9PT8/G7vsQ0AAANYSURBVHja7dY7TsNQEIbRyXWwg3kKpBSpEMr+V0RBgSgoIsTDchwgVNlBkLiac1Yw+vNF1xEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkNcsIiK6RdvP//upU1fNqv//1N0wjeMhgNnN3byCVT8uqgmgilN3j5ufiCbi7H5V/K3yndrcno9TlDhZX3kJc7pet1FiubBEVqfLKBcrO+S1uix9MUNeTV96K2TWl2sjpP4OLK0RMut8ASQnAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAIQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAIQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAB/EsBkg8y25dUImb2WwQiZDWX4qeXWvZ/r6L6H8v5Uy7Ezv9fRPb2VePEIpPX5Ek3s39vTKq6dumqGreTUzeM2moivzedVsWq6U3cPz9PhYe0WbT+3aqJTd8M0jt5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALL7BedIPd3RnznaAAAAAElFTkSuQmCC">
+          </ion-thumbnail>
+          <ion-label>
+            <h2>{{data.id}}</h2>
+            <p>{{data.name}}</p>
+          </ion-label>
+          <ion-icon name="chevron-forward" slot="end"></ion-icon>
+        </ion-item>
+  
+        <ion-item  item lines="none" *ngFor="let data of boyRecords1 | filter:filterTerm">
+          <ion-thumbnail slot="start">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
+          </ion-thumbnail>
+          <ion-label>
+            <h2>{{data.id}}</h2>
+            <p>{{data.name}}</p>
+          </ion-label>
+          <ion-icon name="chevron-forward" slot="end"></ion-icon>
+        </ion-item>
+  
+  
+  
+        <ion-item  item lines="none" *ngFor="let data of boyRecords2 | filter:filterTerm">
+          <ion-thumbnail slot="start">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
+          </ion-thumbnail>
+          <ion-label>
+            <h2>{{data.id}}</h2>
+            <p>{{data.name}}</p>
+          </ion-label>
+          <ion-icon name="chevron-forward" slot="end"></ion-icon>
+        </ion-item>
+  
+  
+        <ion-item  item lines="none" *ngFor="let data of boyRecords3 | filter:filterTerm">
+          <ion-thumbnail slot="start">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
+          </ion-thumbnail>
+          <ion-label>
+            <h2>{{data.id}}</h2>
+            <p>{{data.name}}</p>
+          </ion-label>
+          <ion-icon name="chevron-forward" slot="end"></ion-icon>
+        </ion-item>
+  
 
 
-      <ion-item  item lines="none" *ngFor="let data of boyRecords | filter:filterTerm">
-        <ion-thumbnail slot="start">
-          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAMAAADDpiTIAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAK5QTFRF////QUeb/0tVQUeb/0tVQUeb/0tVQUeb/0tVQUeb/0tVQUeb/0tVQUeb/0tVQUeb/0tVQUeb/0tVQUeb/0tVQUeb/0tVQUeb/0tVQUeb/0tVQUeb/0tVi47A/XB4QUeb/0tVQUeb/0tVQUeb9fX1/0tVQUeb/0tVQUeb/0tVkZXDkZTD/WVtQUeb/0tVQUeb/0tVQUeb/0tVQUeb/0tVQUeb/0tVQUeb9fX1/0tV0QJVKwAAADd0Uk5TAAEBBQUGBg4OHBwgIDAwQEBqam1tdHR7e4WFh4eZmaamrq64uLi8vMDAxcbGz8/T0+Hh9PT8/G7vsQ0AAANYSURBVHja7dY7TsNQEIbRyXWwg3kKpBSpEMr+V0RBgSgoIsTDchwgVNlBkLiac1Yw+vNF1xEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkNcsIiK6RdvP//upU1fNqv//1N0wjeMhgNnN3byCVT8uqgmgilN3j5ufiCbi7H5V/K3yndrcno9TlDhZX3kJc7pet1FiubBEVqfLKBcrO+S1uix9MUNeTV96K2TWl2sjpP4OLK0RMut8ASQnAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAIQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAIQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAB/EsBkg8y25dUImb2WwQiZDWX4qeXWvZ/r6L6H8v5Uy7Ezv9fRPb2VePEIpPX5Ek3s39vTKq6dumqGreTUzeM2moivzedVsWq6U3cPz9PhYe0WbT+3aqJTd8M0jt5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALL7BedIPd3RnznaAAAAAElFTkSuQmCC">
-        </ion-thumbnail>
-        <ion-label>
-          <h2>{{data.id}}</h2>
-          <p>{{data.name}}</p>
-        </ion-label>
-        <ion-icon name="chevron-forward" slot="end"></ion-icon>
-      </ion-item>
+<h2 class="para"> Lawyers </h2>
+<swiper [pagination]="true" class="product-slider2" [slidesPerView]="2" [loop]="true"  effect="fade"  [spaceBetween]="10">
+  <ng-template swiperSlide>
+ 
+<ion-button (click)="onClick()">
+  <ion-icon slot="icon-only" name="add"></ion-icon>
+</ion-button>
+  
+  </ng-template> 
 
-      <ion-item  item lines="none" *ngFor="let data of boyRecords1 | filter:filterTerm">
-        <ion-thumbnail slot="start">
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
-        </ion-thumbnail>
-        <ion-label>
-          <h2>{{data.id}}</h2>
-          <p>{{data.name}}</p>
-        </ion-label>
-        <ion-icon name="chevron-forward" slot="end"></ion-icon>
-      </ion-item>
+  <ng-template swiperSlide>
+    <div>
+      <img [defaultImage]="'https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921'" [lazyLoad]="'https://thumbs.dreamstime.com/b/portrait-female-lawyer-court-holding-brief-book-51714307.jpg'">
 
 
+    </div>
+  
+  </ng-template> 
+  
+  <ng-template swiperSlide>
+    <div>
+      <img [defaultImage]="'https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921'" [lazyLoad]="'https://www.nairaland.com/attachments/4946956_dsc0582_jpegba2caf3c66c2f5aa3cdff5a77fdee626'">
 
-      <ion-item  item lines="none" *ngFor="let data of boyRecords2 | filter:filterTerm">
-        <ion-thumbnail slot="start">
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
-        </ion-thumbnail>
-        <ion-label>
-          <h2>{{data.id}}</h2>
-          <p>{{data.name}}</p>
-        </ion-label>
-        <ion-icon name="chevron-forward" slot="end"></ion-icon>
-      </ion-item>
+    </div>
+  </ng-template>
 
+  <ng-template swiperSlide>
+    <div>
+      <img [defaultImage]="'https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921'" [lazyLoad]="'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxEsZgGwHjYFBTgO7JAMSv8JV3Umrc8-SbDQ&usqp=CAU'">
 
-      <ion-item  item lines="none" *ngFor="let data of boyRecords3 | filter:filterTerm">
-        <ion-thumbnail slot="start">
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
-        </ion-thumbnail>
-        <ion-label>
-          <h2>{{data.id}}</h2>
-          <p>{{data.name}}</p>
-        </ion-label>
-        <ion-icon name="chevron-forward" slot="end"></ion-icon>
-      </ion-item>
+    </div>
+  </ng-template>
+  </swiper>
+<ion-card class="container3"> 
+  <ion-card-content>
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit perferendis eum nesciunt </p>
 
+  </ion-card-content>
+ </ion-card>
 
+ <span class="space">
 
-      <ion-card>
-        <ion-item  [routerLink]="['/maritime']" class="ion-activated" routerlink>
-          <ion-icon name="wifi" slot="start"></ion-icon>
-          <ion-label>Chuba</ion-label>
-        </ion-item></ion-card>
-        <br><br><br>
-   </div>
-
-
-
+ </span>
 
 
 
   </div>
+  
 </div>
 
 

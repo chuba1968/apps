@@ -12,7 +12,7 @@ import { AvatarService } from '../services/avatar.service';
 })
 export class Tab1Page {
 profile = null;
- 
+
   constructor(
     private avatarService: AvatarService,
     private authService: AuthService,
@@ -24,12 +24,12 @@ profile = null;
       this.profile = data;
     });
   }
- 
+
   async logout() {
     await this.authService.logout();
     this.router.navigateByUrl('/', { replaceUrl: true });
   }
- 
+
   async changeImage() {
     const image = await Camera.getPhoto({
       quality: 90,
@@ -37,14 +37,14 @@ profile = null;
       resultType: CameraResultType.Base64,
       source: CameraSource.Photos, // Camera, Photos or Prompt!
     });
- 
+
     if (image) {
       const loading = await this.loadingController.create();
       await loading.present();
- 
+
       const result = await this.avatarService.uploadImage(image);
       loading.dismiss();
- 
+
       if (!result) {
         const alert = await this.alertController.create({
           header: 'Upload failed',
