@@ -101,7 +101,7 @@ span > p {
 
 
 
-  
+
 
   }
 
@@ -165,7 +165,7 @@ ion-button{
     margin-top: 40px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   }
-  
+
   img {
     width: 140px;
     height: 100px;
@@ -177,12 +177,12 @@ ion-button{
     transform: translateY(-60px);
     position: absolute;
     right: 0;
-  
+
 
   }
-  
+
   }
-  
+
 
 .advert{
   width: auto;
@@ -205,6 +205,18 @@ ion-button{
 }
 
 
+h1{
+  para{
+    color: rgb(0, 0, 0);
+    font-family: 'Quicksand', sans-serif;
+    font-size:40px;
+    padding-top:10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+
 .container3 {
   --background: #324B4C !important;
   margin: 5px;
@@ -217,7 +229,7 @@ ion-button{
     color: rgb(255, 255, 255);
     font-family: 'Quicksand', sans-serif;
     font-size:15px;
-   
+
 
   }
 

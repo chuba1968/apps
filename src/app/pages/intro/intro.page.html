@@ -7,12 +7,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
+ 
 <div class="container">
 
 </div>
@@ -27,7 +22,7 @@
       </p>
 
 
-      <ion-item  item lines="none">
+      <ion-item  item lines="none" (click)="showBannerAd()">
         <ion-thumbnail slot="start">
           <img src="/assets/download.png  ">
         </ion-thumbnail>
@@ -39,7 +34,7 @@
       </ion-item>
 
 
-      <ion-item  item lines="none" [routerLink]="['/tabs']" routerLinkActive="router-link-active" >
+      <ion-item (click)="showInterstitialAd()"  item lines="none" [routerLink]="['/tabs']" routerLinkActive="router-link-active">
         <ion-thumbnail slot="start">
           <img src="/assets/french.png" >
         </ion-thumbnail>
@@ -49,7 +44,8 @@
         <ion-icon name="chevron-forward" slot="end"></ion-icon>
       </ion-item>
 
-      <img class="choose" src="/assets/On the way-cuate.svg" >
+      <img class="choose" src="/assets/On the way-cuate.svg"  >
+
 
       <br><br><br>
    </div>

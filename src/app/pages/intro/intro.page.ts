@@ -3,6 +3,12 @@ import SwiperCore, { Autoplay, Keyboard, Pagination, Scrollbar, Zoom } from 'swi
 import { IonicSlides } from '@ionic/angular';
 
 SwiperCore.use([Autoplay, Keyboard, Scrollbar, Zoom, IonicSlides]);
+import {
+  BannerAd,
+  InterstitialAd,
+  RewardedAd,
+  RewardedInterstitialAd,
+} from '@admob-plus/capacitor';
 
 @Component({
   selector: 'app-intro',
@@ -12,8 +18,35 @@ SwiperCore.use([Autoplay, Keyboard, Scrollbar, Zoom, IonicSlides]);
 export class IntroPage {
 
   constructor() { }
-
-  ngOnInit() {
+  async showBannerAd() {
+    const banner = new BannerAd({
+      adUnitId: 'ca-app-pub-3940256099942544/6300978111',
+      position: 'top',
+    });
+    await banner.show();
   }
 
+  async showInterstitialAd() {
+    const interstitial = new InterstitialAd({
+      adUnitId: 'ca-app-pub-3940256099942544/1033173712',
+    });
+    await interstitial.load();
+    await interstitial.show();
+  }
+
+  async showRewardedAd() {
+    const rewarded = new RewardedAd({
+      adUnitId: 'ca-app-pub-3940256099942544/5224354917',
+    });
+    await rewarded.load();
+    await rewarded.show();
+  }
+
+  async showRewardedInterstitialAd() {
+    const rewarded = new RewardedInterstitialAd({
+      adUnitId: 'ca-app-pub-3940256099942544/6978759866',
+    });
+    await rewarded.load();
+    await rewarded.show();
+  }
 }
