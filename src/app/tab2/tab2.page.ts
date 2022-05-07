@@ -15,29 +15,14 @@ SwiperCore.use([Autoplay, Keyboard, Scrollbar, Zoom, IonicSlides]);
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+  type: string='friends';
+  //this code is necessary
+
+
+
   filterTerm: string;
 
   constructor() { }
-
-  boyRecords = [{
-    "id": "Droit maritime",
-    "name": "un ensemble de lois qui régissent les affaires maritimes privées"
-  }]
-
-  boyRecords1 = [{
-    "id": "Droit de l'entreprise",
-    "name": "La loi réglementant la gestion et la réglementation des entreprises"
-  }]
-
-  boyRecords2 = [{
-    "id": "Droit commercial",
-    "name": "également connu sous le nom de droit commercial ou droit commercial"
-  }]
-
-  boyRecords3 = [{
-    "id": "Immobilier",
-    "name": "documentation and management"
-  }]
 
 
   async showBannerAd() {
@@ -72,4 +57,8 @@ export class Tab2Page {
     await rewarded.show();
   }
 
+
   }
+
+
+

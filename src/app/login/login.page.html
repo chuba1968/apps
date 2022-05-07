@@ -8,7 +8,7 @@
 
 
   <div class="div1">
-  <img [defaultImage]="'https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921'" [lazyLoad]="'/assets/Mobile login-cuate.svg'">
+  <img [defaultImage]="'https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921'" [lazyLoad]="'/assets/Mobile wireframe-cuate.svg'">
 
     </div>
 
@@ -16,7 +16,7 @@
 
 
 <div class="div2">
- <p>Login</p>
+ <p>Signup</p>
 
   <form (ngSubmit)="login()" [formGroup]="credentials"  class="ion-padding">
     <ion-item class="ion-margin-bottom" lines="none">
@@ -29,11 +29,13 @@
       <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
       <ion-note slot="error" *ngIf="(password.dirty || password.touched) && password.errors">Password needs to be 6 characters</ion-note>
     </ion-item>
-      <ion-button type="submit" expand="block" class="button1">Login
 
-      </ion-button>
 
       <ion-button type="button" expand="block" (click)="register()" class="button">   <ion-icon name="add-circle-sharp" slot="start"></ion-icon>Signup</ion-button>
+
+      <ion-button [routerLink]="['/intro']" routerLinkActive="router-link-active" expand="block" class="button1">Login
+
+      </ion-button>
   </form>
 
 

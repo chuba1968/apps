@@ -1,64 +1,47 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
 
-    </ion-title>
-  </ion-toolbar>
+<ion-header>
+
 </ion-header>
 
-<ion-content [fullscreen]="true">
- 
-<div class="container">
+<ion-content >
+
+
+
+  <div class="div1">
+  <img [defaultImage]="'https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921'" [lazyLoad]="'/assets/Mobile wireframe-cuate.svg'">
+
+    </div>
+
+
+
+
+<div class="div2">
+ <p>Login</p>
+
+  <form (ngSubmit)="login()" [formGroup]="credentials"  class="ion-padding">
+    <ion-item class="ion-margin-bottom" lines="none">
+      <ion-input type="email" placeholder="E-mail" formControlName="email"></ion-input>
+
+      <ion-note slot="error" *ngIf="(email.dirty || email.touched) && email.errors">Email is invalid</ion-note>
+    </ion-item>
+
+    <ion-item class="ion-margin-bottom" lines="none">
+      <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+      <ion-note slot="error" *ngIf="(password.dirty || password.touched) && password.errors">Password needs to be 6 characters</ion-note>
+    </ion-item>
+
+    <ion-button type="submit" expand="block" class="button1">Login
+
+    </ion-button>
+
+
+
+  </form>
+
+
+  <p>Welcome to Edward E. Obomanu & Co</p>
+
 
 </div>
-
-
-  <div class="blackdiv">
-   <!-- white area child div-->
-
-    <div>
-
-      <p class="para">Choose a language
-      </p>
-
-
-      <ion-item  item lines="none" (click)="showBannerAd()">
-        <ion-thumbnail slot="start">
-          <img src="/assets/download.png  ">
-        </ion-thumbnail>
-        <ion-label>
-          <h2>English</h2>
-          <p></p>
-        </ion-label>
-        <ion-icon name="chevron-forward" slot="end"></ion-icon>
-      </ion-item>
-
-
-      <ion-item (click)="showInterstitialAd()"  item lines="none" [routerLink]="['/tabs']" routerLinkActive="router-link-active">
-        <ion-thumbnail slot="start">
-          <img src="/assets/french.png" >
-        </ion-thumbnail>
-        <ion-label>
-          <h2>Francais</h2>
-        </ion-label>
-        <ion-icon name="chevron-forward" slot="end"></ion-icon>
-      </ion-item>
-
-      <img class="choose" src="/assets/On the way-cuate.svg"  >
-
-
-      <br><br><br>
-   </div>
-
-
-
-
-
-
-  </div>
-
-
-
-
 
 </ion-content>

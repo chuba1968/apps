@@ -9,4 +9,9 @@ export class TabsPage {
 
   constructor() {}
 
+  whatsapp() {
+    { window.open('https://wa.me/08037094992'); }
+  }
+
+
 }

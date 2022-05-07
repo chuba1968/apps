@@ -1,24 +1,18 @@
-<ion-header [translucent]="true">
 
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
 
-<div class="container">
+<div class="container1">
 
-  <ion-searchbar showCancelButton="focus"  [(ngModel)]="filterTerm" animated="true"></ion-searchbar>
+<p>Welcome to Edward E. Obomanu & Co
+</p>
+
+
+
+
 </div>
 
-  <div class="blackdiv">
-   <!-- white area child div-->
-
-
-    <div>
+<div>
 
 
       <swiper [pagination]="true" class="product-slider" [slidesPerView]="" [loop]="true"  effect="fade"  [spaceBetween]="20">
@@ -62,100 +56,145 @@
 
       </swiper>
 
-      <p class="para">nous sommes avocats et notaires bilingues
-      </p>
 
+<div class="seg">
+  <ion-segment  [(ngModel)]="type" swipe-gesture="true" >
+    <ion-segment-button value="friends" checked >
+      <ion-label>Practice</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="enemies" >
+      <ion-label>more</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</div>
 
-    <ion-item  item lines="none" *ngFor="let data of boyRecords | filter:filterTerm">
-          <ion-thumbnail slot="start">
-            <img src="/assets/inbox.gif">
-          </ion-thumbnail>
-          <ion-label>
-            <h2>{{data.id}}</h2>
-            <p>{{data.name}}</p>
-          </ion-label>
-          <ion-icon name="chevron-forward" slot="end"></ion-icon>
-        </ion-item>
-
-        <ion-item  item lines="none" *ngFor="let data of boyRecords1 | filter:filterTerm">
-          <ion-thumbnail slot="start">
-            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
-          </ion-thumbnail>
-          <ion-label>
-            <h2>{{data.id}}</h2>
-            <p>{{data.name}}</p>
-          </ion-label>
-          <ion-icon name="chevron-forward" slot="end"></ion-icon>
-        </ion-item>
-
-
-
-        <ion-item  item lines="none" *ngFor="let data of boyRecords2 | filter:filterTerm">
-          <ion-thumbnail slot="start">
-            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
-          </ion-thumbnail>
-          <ion-label>
-            <h2>{{data.id}}</h2>
-            <p>{{data.name}}</p>
-          </ion-label>
-          <ion-icon name="chevron-forward" slot="end"></ion-icon>
-        </ion-item>
-
-
-        <ion-item  item lines="none" *ngFor="let data of boyRecords3 | filter:filterTerm">
-          <ion-thumbnail slot="start">
-            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
-          </ion-thumbnail>
-          <ion-label>
-            <h2>{{data.id}}</h2>
-            <p>{{data.name}}</p>
-          </ion-label>
-          <ion-icon name="chevron-forward" slot="end"></ion-icon>
-        </ion-item>
-
-
-
-<h2 class="para"> Lawyers </h2>
-<swiper [pagination]="true" class="product-slider2" [slidesPerView]="2" [loop]="true"  effect="fade"  [spaceBetween]="10">
-  <ng-template swiperSlide>
-
-<ion-button (click)="showInterstitialAd()">
-  <ion-icon slot="icon-only" name="add"></ion-icon>
-</ion-button>
-
-  </ng-template>
-
-  <ng-template swiperSlide>
-    <div>
-      <img [defaultImage]="'https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921'" [lazyLoad]="'https://thumbs.dreamstime.com/b/portrait-female-lawyer-court-holding-brief-book-51714307.jpg'">
-
-
-    </div>
-
-  </ng-template>
-
-  <ng-template swiperSlide>
-    <div>
-      <img [defaultImage]="'https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921'" [lazyLoad]="'https://www.nairaland.com/attachments/4946956_dsc0582_jpegba2caf3c66c2f5aa3cdff5a77fdee626'">
-
-    </div>
-  </ng-template>
-
-  <ng-template swiperSlide>
-    <div>
-      <img [defaultImage]="'https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921'" [lazyLoad]="'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxEsZgGwHjYFBTgO7JAMSv8JV3Umrc8-SbDQ&usqp=CAU'">
-
-    </div>
-  </ng-template>
-  </swiper>
-
- <span class="space">
-
- </span>
-
-
-
+<div class="container2" [ngSwitch]="type">
+<div class="thumbsbackground" [routerLink]="['/two']" routerLinkActive="router-link-active">
+<ion-item item lines="none" *ngSwitchCase="'friends'">
+  <div class="thumbsback">
+    <ion-thumbnail slot="start">
+      <img src="/assets/apps-sort.svg">
+    </ion-thumbnail>
   </div>
+
+  <ion-label>
+    <h2>Corporate law practice</h2>
+    <h2>more details </h2>
+  </ion-label>
+  </ion-item>
+</div>
+
+  <div class="thumbsbackground" [routerLink]="['/three']" routerLinkActive="router-link-active">
+<ion-item item lines="none" *ngSwitchCase="'friends'">
+  <div class="thumbsback">
+    <ion-thumbnail slot="start">
+      <img src="/assets/apps-sort.svg">
+    </ion-thumbnail>
+  </div>
+
+  <ion-label>
+    <h2>Maritime law</h2>
+    <h2>more details </h2>
+  </ion-label>
+  </ion-item>
+</div>
+
+  <div class="thumbsbackground" [routerLink]="['/four']" routerLinkActive="router-link-active">
+<ion-item item lines="none" *ngSwitchCase="'friends'">
+  <div class="thumbsback">
+    <ion-thumbnail slot="start">
+      <img src="/assets/apps-sort.svg">
+    </ion-thumbnail>
+  </div>
+
+  <ion-label>
+    <h2>Oil and Gas</h2>
+    <h2>more details </h2>
+  </ion-label>
+  </ion-item>
+</div>
+
+  <div class="thumbsbackground" [routerLink]="['/five']" routerLinkActive="router-link-active">
+  <ion-item item lines="none" *ngSwitchCase="'friends'">
+    <div class="thumbsback">
+      <ion-thumbnail slot="start">
+        <img src="/assets/apps-sort.svg">
+      </ion-thumbnail>
+    </div>
+
+    <ion-label>
+      <h2>Political Cases</h2>
+      <h2>more details </h2>
+    </ion-label>
+    </ion-item>
+  </div>
+
+
+<!-- Second Segment-->
+<div class="thumbsbackground" [routerLink]="['/six']" routerLinkActive="router-link-active">
+<ion-item item lines="none" *ngSwitchCase="'enemies'">
+  <div class="thumbsback">
+    <ion-thumbnail slot="start">
+      <img src="/assets/apps-sort.svg">
+    </ion-thumbnail>
+  </div>
+
+  <ion-label>
+    <h2>Debt Recoveries</h2>
+    <h2>more details </h2>
+  </ion-label>
+  </ion-item>
+</div>
+
+
+  <div class="thumbsbackground" [routerLink]="['/seven']" routerLinkActive="router-link-active">
+<ion-item item lines="none" *ngSwitchCase="'enemies'">
+  <div class="thumbsback">
+    <ion-thumbnail slot="start">
+      <img src="/assets/apps-sort.svg">
+    </ion-thumbnail>
+  </div>
+
+  <ion-label>
+    <h2>Tax law</h2>
+    <h2>more details </h2>
+  </ion-label>
+  </ion-item>
+</div>
+
+  <div class="thumbsbackground" [routerLink]="['/eight']" routerLinkActive="router-link-active">
+<ion-item item lines="none" *ngSwitchCase="'enemies'">
+  <div class="thumbsback">
+    <ion-thumbnail slot="start">
+      <img src="/assets/apps-sort.svg">
+    </ion-thumbnail>
+  </div>
+
+  <ion-label>
+    <h2>Insurance law</h2>
+    <h2>more details </h2>
+  </ion-label>
+  </ion-item>
+</div>
+
+  <div class="thumbsbackground" [routerLink]="['/nine']" routerLinkActive="router-link-active">
+  <ion-item item lines="none" *ngSwitchCase="'enemies'">
+    <div class="thumbsback">
+      <ion-thumbnail slot="start">
+        <img src="/assets/apps-sort.svg">
+      </ion-thumbnail>
+    </div>
+
+    <ion-label>
+      <h2>Company secretarial services</h2>
+      <h2>more details </h2>
+    </ion-label>
+    </ion-item>
+  </div>
+
+
+<!-- end of 2nd segment-->
+</div>
 
 </div>
 
