@@ -10,7 +10,7 @@ export class TabsPage {
   constructor() {}
 
   whatsapp() {
-    { window.open('https://wa.me/08037094992'); }
+    { window.open('https://wa.me/+2348037094992'); }
   }
 
 

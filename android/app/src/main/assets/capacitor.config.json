@@ -1,0 +1,6 @@
+{
+	"appId": "io.edward.notary",
+	"appName": "Edward E O and Co Notary Public",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
